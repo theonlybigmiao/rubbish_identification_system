@@ -5,7 +5,7 @@
 ```Shell
 │  .gitignore
 │  file 用于暂存待识别的图像文件
-│  logs 存储日志
+│  logs 自动增添存储日志
 │  app.py 在此处运行
 │  LICENSE
 │  README.md
