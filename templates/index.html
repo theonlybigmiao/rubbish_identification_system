@@ -1,0 +1,55 @@
+{% extends "navigation.html" %}
+
+{% block title %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block head %}
+    {{ super() }}
+    <style>
+        .choose-file-button:hover {
+            font-size: 15px;
+        }
+
+        .analyze-button:hover {
+            font-size: 15px;
+        }
+    </style>
+{% endblock %}
+
+
+
+{% block body %}
+    <div>
+        <div class='center'>
+            {#        <div class='title' style='font-size: 24px;'>垃圾检测分类系统</div>#}
+            <p style="font-size:20px;text-align:center;text-indent:2em;line-height:2em;">垃圾检测分类系统</p>
+            <div class="show-box"> <!--展示的框-->
+                {% block showbox %}
+                    <img id='image-picked' class='no-display' alt='Chosen Image' height='250'/>
+                    <video autoplay="autoplay" id='image-picked1' class='no-display' alt='Chosen Image' height='250'/>
+                {% endblock %}
+            </div>
+
+
+            <div class='content'> <!-- 表单 -->
+                <div class='no-display'> <!-- 不显示 -->
+                    <form action="/image" method="POST" enctype="multipart/form-data"> <!-- post request -->
+                        <input id='file-input' class='no-display' type='file' name='image'
+                               accept='image/png,image/jpeg,image/jpg,video/mp4,video/avi' onchange='showPicked(this)'/>
+                </div>
+
+                <div class="bottom-box">
+                    <button class='choose-file-button' type='button' onclick='showPicker()'>上传文档</button>
+                    <button id="analyze-button" class="analyze-button" type="submit">分析</button>
+                </div>
+
+                <div class='upload-label'>
+                    <label id='upload-label'>没有文件被选择</label>
+                </div>f
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
