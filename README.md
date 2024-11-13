@@ -1,5 +1,5 @@
 # 垃圾检测系统
-这是一个基于yoloV5目标检测算法和Flask框架搭建的简易垃圾检测系统。前端采用html加css美化，后端使用ajax，并引入了jQuery增强网页的交互性。图像识别工作主要通过opencv库完成。
+这是一个基于yoloV5目标检测算法和Flask框架搭建的简易垃圾检测系统。前端采用html加css，后端使用ajax，并引入了jQuery增强网页的交互性。图像识别工作主要通过opencv库完成。
 
 ## 项目结构
 ```Shell
