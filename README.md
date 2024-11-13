@@ -12,7 +12,7 @@
 │  requirements.txt
 │  config.py 配置全局参数
 |
-|——yolov5 用于检测和训练的模型数据集
+|——yolov5 yolov5模型实现与训练
 │
 ├─static
 |   css  美化样式
